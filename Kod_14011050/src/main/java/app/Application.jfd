@@ -1,0 +1,277 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1:::p:466:p, space ::11:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp tabbedPane1:::::x, space :::p}}"
+		} ) {
+			name: "this"
+			"title": "Uygulama"
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane1"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp noStaffPanel::l:::x, seq l {par t {comp brokenAvesisLabel::l:p::p, comp staffCrawlButton::l:p:422:p, comp scrollPane1::t:p:430:p}, space :99:38:x}, seq {par l {comp staffProgressPanel:::p:436:p, comp scrollPane2::l:p:430:p}, space :0:24:x}}}}"
+					"$verticalGroup": "par l {seq {space :::p, comp staffCrawlButton:::p::p, space :::p, comp staffProgressPanel:::p::p, space :::p, comp noStaffPanel:::p::p, space u:::p, comp scrollPane1:::p:130:p, space :::p, comp brokenAvesisLabel:::p::p, space u:::p, comp scrollPane2:::p:113:p, space :::p}}"
+				} ) {
+					name: "academicStaffTab"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "staffCrawlButton"
+						"text": "Taramayı Başlat"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "staffCrawlButtonMouseClicked", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						"visible": false
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "staffListForm"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "brokenAvesisLabel"
+						"text": "Hatalı Linkler:"
+						"visible": false
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						"visible": false
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "brokenStaffListForm"
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {par l {comp staffInProgressLabel:::p::p, comp staffProgressBar:::p:423:p}, space :p:44:p}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp staffProgressBar:::p:14:p, space :::x, comp staffInProgressLabel:::p::p}}"
+					} ) {
+						name: "staffProgressPanel"
+						add( new FormComponent( "javax.swing.JProgressBar" ) {
+							name: "staffProgressBar"
+							"indeterminate": true
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "staffInProgressLabel"
+							"text": "İşleminiz devam ediyor..."
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {comp noStaffLabel:::p:475:p, space :0:0:x}}"
+						"$verticalGroup": "par l {seq t {space :0:0:x, comp noStaffLabel:::p::p}}"
+					} ) {
+						name: "noStaffPanel"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "noStaffLabel"
+							"text": "Önce tarama yapmalısınız."
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Akademik Kadro"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq l {space :0:0:x, comp publicationBrokenLinkPanel:::p:0:p, space :p:470:p}, seq {par l {comp academicStaffLabel::l:p::p, comp yearLabel::l:p::p, comp publicationCriteriaLabel::l:p::p, par t:l::p {comp staffComboBox::l:::x, comp yearTextField::l:::x, comp publicationCriteriaComboBox::l:::x, seq l {comp publicationCrawlButton:::p:156:p, space :p:31:p, comp downloadPublicationButton:::p:168:p}}, comp publicationTabProgressPanel::l:p:441:p}, space :0:0:x}}}}"
+					"$verticalGroup": "par l {seq l {space :p:15:p, comp academicStaffLabel:::p::p, space :::p, comp staffComboBox:::p::p, space :::p, comp yearLabel:::p::p, space :::p, comp yearTextField:::p::p, space :::p, comp publicationCriteriaLabel:::p::p, space :::p, comp publicationCriteriaComboBox:::p::p, par l {seq l {space :p:28:p, comp publicationBrokenLinkPanel:::p:0:p}, seq l {space :::p, par b {comp publicationCrawlButton::b:p::p, comp downloadPublicationButton::b:p::p}}}, space s:::p, comp publicationTabProgressPanel:::p::p, space ::173:x}}"
+				} ) {
+					name: "academicPublicationTab"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "academicStaffLabel"
+						"text": "Akademik Kadro:"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "staffComboBox"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "yearLabel"
+						"text": "Yıl:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "yearTextField"
+						"text": "2020"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "publicationCriteriaLabel"
+						"text": "Arama Kriteri:"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "publicationCriteriaComboBox"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "publicationCrawlButton"
+						"text": "Taramayı Başlat"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "publicationCrawlButtonMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "downloadPublicationButton"
+						"text": "İndir"
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "downloadPublicationButtonMouseClicked", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::x, par l {comp publicationInProgressLabel:::p:458:p, comp publicationProgressBar:::p:416:p}}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp publicationProgressBar:::p:20:p, space :::p, comp publicationInProgressLabel:::p::p, space :::x}}"
+					} ) {
+						name: "publicationTabProgressPanel"
+						add( new FormComponent( "javax.swing.JProgressBar" ) {
+							name: "publicationProgressBar"
+							"indeterminate": true
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "publicationInProgressLabel"
+							"text": "İşleminiz devam ediyor..."
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, par l {comp invalidStaff:::p::p, comp scrollPane3:::p:447:p}, space :::x}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp invalidStaff:::p::p, space u:::p, comp scrollPane3::::0:x, space :::p}}"
+					} ) {
+						name: "publicationBrokenLinkPanel"
+						"visible": false
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "invalidStaff"
+							"text": "Hatalı Personeller"
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane3"
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "brokenPublicationListForm"
+							} )
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Akademik Çalışmalar"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {space :6:6:p, comp numberOfBrokenLinkLabel:::p::p, space :0:454:x}, seq t {comp brokenLinkUrl:::p::p, space s:::p, comp urlTextField::::308:x, space u:::p, comp brokenLinkButton:::p::p, space :p:20:p}, comp brokenLinkTabProgressBarPanel::l:::x}}, seq {par l {seq {space :::p, comp scrollPane4:::p:439:p}, seq l {space :p:175:p, comp downloadBrokenLinkReportButton:::p:111:p}}, space :0:180:x}}"
+					"$verticalGroup": "par l {seq {space :p:12:p, par b {comp brokenLinkButton::t:p:41:p, comp brokenLinkUrl::b:p::p, comp urlTextField::b:p:41:p}, space :::p, comp brokenLinkTabProgressBarPanel:::p::p, space u:::p, comp numberOfBrokenLinkLabel:::p::p, space :::p, comp scrollPane4:::p:242:p, space s:::p, comp downloadBrokenLinkReportButton:::p::p, space ::301:x}}"
+				} ) {
+					name: "brokenLinkTab"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "brokenLinkUrl"
+						"text": "URL:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "urlTextField"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "brokenLinkButton"
+						"icon": new com.jformdesigner.model.SwingIcon( 1, "C:\\Users\\SEDAT\\Desktop\\suna\\whatever_jframe\\icons\\search.png" )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "brokenLinkButtonMouseClicked", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane4"
+						"visible": false
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "brokenLinkListForm"
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {comp inProgressLabel:::::x, comp brokenLinkProgressBar::::0:x}, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :::x, comp brokenLinkProgressBar:::p:22:p, space u:::p, comp inProgressLabel:::p::p}}"
+					} ) {
+						name: "brokenLinkTabProgressBarPanel"
+						add( new FormComponent( "javax.swing.JProgressBar" ) {
+							name: "brokenLinkProgressBar"
+							"indeterminate": true
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "inProgressLabel"
+							"text": "İşleminiz devam ediyor..."
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "downloadBrokenLinkReportButton"
+						"text": "İndir"
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "downloadBrokenLinkReportButtonMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "numberOfBrokenLinkLabel"
+						"text": "Bulunan kırık link sayısı:"
+						"visible": false
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Kırık Link"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp saveButton::l:p:406:p, comp label::l:p::p, comp label3::l:p::p, comp label4::l:p::p, comp label5::l:p::p, comp label6::l:p::p, comp label8::l:p::p, comp label7::l:p::p, comp criteriaComboboxSetting::l:p:406:p, par t:l::p {comp departmentWebSite::l::397:x, comp domainSite::l::397:x, comp staffSite::l::397:x, comp brokenLinkNode::l::397:x, seq l {comp criteriaAddButton:::p:122:p, space s:::p, comp criteriaUpdateButton:::p:125:p, space s:::p, comp criteriaDeleteButton::::114:x}, comp criteriaTitle::l::397:x}}, space ::54:x}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label:::p::p, space :p:5:p, comp departmentWebSite:::p::p, space :::p, comp label3:::p::p, space :::p, comp domainSite:::p::p, space :::p, comp label4:::p::p, space :::p, comp staffSite:::p::p, space :::p, comp label5:::p::p, space :::p, comp brokenLinkNode:::p::p, space :::p, comp label6:::p::p, space :::p, comp criteriaTitle:::p::p, space :::p, comp label8:::p::p, space :::p, par b {comp criteriaAddButton::b:p::p, comp criteriaUpdateButton::b:p::p, comp criteriaDeleteButton::b:p::p}, space :::p, comp label7:::p::p, space :::p, comp criteriaComboboxSetting:::p::p, space ::23:x, comp saveButton:::p::p, space :::p}}"
+				} ) {
+					name: "settingsTab"
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "departmentWebSite"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "criteriaUpdateButton"
+						"text": "Güncelle"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "criteriaUpdateButtonMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "domainSite"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "staffSite"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "brokenLinkNode"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "brokenLinkNodeKeyTyped", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "criteriaTitle"
+						"toolTipText": "Eklenecek kriterde kısaltmalar harici her kelimenin sadece ilk harfi büyük olmalı"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "criteriaComboboxSetting"
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "criteriaComboboxSettingItemStateChanged", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label"
+						"text": "Bölüm Web Site Adresi:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Domain Adresi:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "Akademik Kadro Adresi:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "Kırık Link Arama Seviyesi:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "Arama Kriter Başlığı:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "Arama Kriterleri"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "criteriaDeleteButton"
+						"text": "Sil"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "criteriaDeleteButtonMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "criteriaAddButton"
+						"text": "Ekle"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "criteriaAddButtonMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "Arama Kriter İşlemleri:"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "saveButton"
+						"text": "Değişiklikleri Kaydet"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "saveButtonMouseClicked", true ) )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Ayarlar"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 10 )
+			"size": new java.awt.Dimension( 485, 540 )
+		} )
+	}
+}
